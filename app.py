@@ -5,8 +5,9 @@ import plotly
 from plotly import graph_objs as go
 import time
 import pickle
+import os
 
-data = pd.read_csv('model\Boston.csv')
+file_path = os.path.join("model", "Boston.csv")
 data = data.drop(columns="Unnamed: 0")
 data_tbl = data.head(n=20)
 
@@ -15,7 +16,8 @@ st.title("House Price Prediction")
 nav = st.sidebar.selectbox("Navebar",["Home","Prediction","Contribute"],on_change=None)
 
 if nav == "Home":
-    st.image("static\pexels-scott-webb-1029599.jpg")
+    image_path = os.path.join("static", "pexels-scott-webb-1029599.jpg")
+    st.image(image_path)
 
     st.write("""
 The Boston Housing Dataset is a famous and widely used dataset in machine learning and statistics. It was collected by researchers from the UCI Machine Learning Repository and is often used for regression analysis and predictive modeling tasks. The dataset contains information about housing in the Boston, Massachusetts area and was first published by Harrison and Rubinfeld in 1978.
