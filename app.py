@@ -7,7 +7,7 @@ import time
 import pickle
 import os
 
-file_path = os.path.join("model", "Boston.csv")
+data = os.path.join("model", "Boston.csv")
 data = data.drop(columns="Unnamed: 0")
 data_tbl = data.head(n=20)
 
