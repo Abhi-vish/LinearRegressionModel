@@ -7,7 +7,7 @@ import time
 import pickle
 import os
 
-data = os.path.join("model", "Boston.csv")
+data = pd.read_csv(os.path.join("model", "Boston.csv"))
 data = data.drop(columns="Unnamed: 0")
 data_tbl = data.head(n=20)
 
